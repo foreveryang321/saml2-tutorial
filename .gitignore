@@ -1,0 +1,47 @@
+# maven ignore
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+### SVM
+.svn
+
+### Maven template
+**/target/
+!.mvn/wrapper/*
+*.zip
+*.tar
+*.tar.gz
+*.jar.original
+*-sources.jar
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+.factorypath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
+*.orig
+
+# vscode
+.vscode
+
+# nodejs
+dist/
+node_modules/
+package-lock.json

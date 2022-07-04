@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" scanPeriod="60 seconds" debug="false">
+    <property name="logger.charset" value="UTF-8"/>
+    <property name="logger.path" value="./logs"/>
+    <property name="logger.pattern" value="%d{yy-MM-dd HH:mm:ss} %p %t %c{2}.%M\\(%L\\) | %m%n"/>
+    <property name="logger.maxHistory" value="100"/>
+
+    <springProfile name="dev">
+        <property name="logger.pattern"
+                  value="%d{yy-MM-dd HH:mm:ss} %highlight(%p) %yellow(%t) %cyan(%c.%M\\(%L\\)) | %m%n"/>
+        <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder charset="${logger.charset}">
+                <pattern>${logger.pattern}</pattern>
+            </encoder>
+        </appender>
+
+        <logger level="TRACE"
+                name="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+        <logger level="TRACE"
+                name="org.springframework.security.oauth2.provider.endpoint.FrameworkEndpointHandlerMapping"/>
+        <logger level="DEBUG" name="top.ylonline.easy"/>
+
+        <root level="INFO">
+            <appender-ref ref="stdout"/>
+        </root>
+    </springProfile>
+    <springProfile name="test, prod">
+        <appender name="info_rolling"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <File>${logger.path}/info.log</File>
+            <encoder charset="${logger.charset}">
+                <pattern>${logger.pattern}</pattern>
+            </encoder>
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>INFO</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>
+                    ${logger.path}/info.%d{yy-MM-dd}.%i.log
+                </fileNamePattern>
+                <maxHistory>${logger.maxHistory}</maxHistory>
+                <maxFileSize>1GB</maxFileSize>
+                <totalSizeCap>100GB</totalSizeCap>
+            </rollingPolicy>
+        </appender>
+        <appender name="warn_rolling"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <encoder charset="${logger.charset}">
+                <pattern>${logger.pattern}</pattern>
+            </encoder>
+            <File>${logger.path}/warn.log</File>
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>WARN</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>
+                    ${logger.path}/warn.%d{yy-MM-dd}.%i.log
+                </fileNamePattern>
+                <maxHistory>${logger.maxHistory}</maxHistory>
+                <maxFileSize>128MB</maxFileSize>
+                <totalSizeCap>1GB</totalSizeCap>
+            </rollingPolicy>
+        </appender>
+        <appender name="error_rolling"
+                  class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <encoder charset="${logger.charset}">
+                <pattern>${logger.pattern}</pattern>
+            </encoder>
+            <File>${logger.path}/error.log</File>
+            <filter class="ch.qos.logback.classic.filter.LevelFilter">
+                <level>ERROR</level>
+                <onMatch>ACCEPT</onMatch>
+                <onMismatch>DENY</onMismatch>
+            </filter>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>
+                    ${logger.path}/error.%d{yy-MM-dd}.%i.log
+                </fileNamePattern>
+                <maxHistory>${logger.maxHistory}</maxHistory>
+                <maxFileSize>256MB</maxFileSize>
+                <totalSizeCap>2GB</totalSizeCap>
+            </rollingPolicy>
+        </appender>
+        <logger name="warn_rolling" level="WARN"/>
+        <logger name="error_rolling" level="ERROR"/>
+        <root level="INFO">
+            <appender-ref ref="info_rolling"/>
+            <appender-ref ref="warn_rolling"/>
+            <appender-ref ref="error_rolling"/>
+        </root>
+    </springProfile>
+</configuration>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://iam.grgbanking.com/saml">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:KeyDescriptor use="encryption">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIDYzCCAkugAwIBAgIEG4HS6TANBgkqhkiG9w0BAQsFADBhMQ4wDAYDVQQGEwVjaGluYTELMAkG
+                        A1UECBMCZ2QxCzAJBgNVBAcTAmd6MRMwEQYDVQQKEwpncmdiYW5raW5nMRMwEQYDVQQLEwpncmdi
+                        YW5raW5nMQswCQYDVQQDEwJ5bDAgFw0yMjA2MjkwODExMjRaGA8yMTIyMDYwNTA4MTEyNFowYTEO
+                        MAwGA1UEBhMFY2hpbmExCzAJBgNVBAgTAmdkMQswCQYDVQQHEwJnejETMBEGA1UEChMKZ3JnYmFu
+                        a2luZzETMBEGA1UECxMKZ3JnYmFua2luZzELMAkGA1UEAxMCeWwwggEiMA0GCSqGSIb3DQEBAQUA
+                        A4IBDwAwggEKAoIBAQCcWkoWYRdNVf2wPieJeuTHslEVbOudU760BmcaqzavpyUQoT9BuySQr7Ow
+                        Ijl3d88RiI5rGirMHgRUqqI70FaI373JSGWEdU8wFQAYPFX+A6KBN1tIBpsR4Q7taaNJff3ncsdE
+                        Bm57dh1YWini8sfhSLmGslsKc9wm/8dCiMF2M+eq+vmkJEmScYRDnt8WJo/Suk4x72V1B7Oo26wn
+                        OrpC6zZVuIAhMXNEJ9SPQXTAWAFVJxK/qAL75S17jhzyLV8AXNE1HJQQd6dg8hIp4mRxsC7rsYe4
+                        fV+cjNZ05uxJldpE7g6RL/kXdxiL/J0xvmHfvyip3TyaR9Y8LtunVFXzAgMBAAGjITAfMB0GA1Ud
+                        DgQWBBQfGoZWNZJv+CppoxiGyx0oCsqJBTANBgkqhkiG9w0BAQsFAAOCAQEAm1nGMj3DIoKXY3mn
+                        gTbjVkpEwGLITqWdGgtEXsLDtt3aEIM9BdRHnaYUOTCmOI83vrIhnSSGyEBmI8apkbZd53EZEeWE
+                        hiuQ3ujsU1B8b/+Md/U5LoxUL/2VsF3TZFl8cVO3fJYcdYQKP2CXKCesTHJVGrSgG3qLl7+kJQSF
+                        yhY02jQcvd3Mw61OLCgIiRs1ck6kOmTi89cARjdALPzZ7DAqhoyobtM0pEBwYUL1B9U70figs1bv
+                        a4057lVamGhSB2L2fdPLXrewOo18LwE6U68hVtTyT9JQf9sQ4LG9oIdLQ7E0ooAqjwlJU0n/3t2R
+                        dO8/dYYIs3NGg3OexgBMSw==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:KeyDescriptor use="signing">
+            <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <ds:X509Data>
+                    <ds:X509Certificate>MIIDYzCCAkugAwIBAgIEG4HS6TANBgkqhkiG9w0BAQsFADBhMQ4wDAYDVQQGEwVjaGluYTELMAkG
+                        A1UECBMCZ2QxCzAJBgNVBAcTAmd6MRMwEQYDVQQKEwpncmdiYW5raW5nMRMwEQYDVQQLEwpncmdi
+                        YW5raW5nMQswCQYDVQQDEwJ5bDAgFw0yMjA2MjkwODExMjRaGA8yMTIyMDYwNTA4MTEyNFowYTEO
+                        MAwGA1UEBhMFY2hpbmExCzAJBgNVBAgTAmdkMQswCQYDVQQHEwJnejETMBEGA1UEChMKZ3JnYmFu
+                        a2luZzETMBEGA1UECxMKZ3JnYmFua2luZzELMAkGA1UEAxMCeWwwggEiMA0GCSqGSIb3DQEBAQUA
+                        A4IBDwAwggEKAoIBAQCcWkoWYRdNVf2wPieJeuTHslEVbOudU760BmcaqzavpyUQoT9BuySQr7Ow
+                        Ijl3d88RiI5rGirMHgRUqqI70FaI373JSGWEdU8wFQAYPFX+A6KBN1tIBpsR4Q7taaNJff3ncsdE
+                        Bm57dh1YWini8sfhSLmGslsKc9wm/8dCiMF2M+eq+vmkJEmScYRDnt8WJo/Suk4x72V1B7Oo26wn
+                        OrpC6zZVuIAhMXNEJ9SPQXTAWAFVJxK/qAL75S17jhzyLV8AXNE1HJQQd6dg8hIp4mRxsC7rsYe4
+                        fV+cjNZ05uxJldpE7g6RL/kXdxiL/J0xvmHfvyip3TyaR9Y8LtunVFXzAgMBAAGjITAfMB0GA1Ud
+                        DgQWBBQfGoZWNZJv+CppoxiGyx0oCsqJBTANBgkqhkiG9w0BAQsFAAOCAQEAm1nGMj3DIoKXY3mn
+                        gTbjVkpEwGLITqWdGgtEXsLDtt3aEIM9BdRHnaYUOTCmOI83vrIhnSSGyEBmI8apkbZd53EZEeWE
+                        hiuQ3ujsU1B8b/+Md/U5LoxUL/2VsF3TZFl8cVO3fJYcdYQKP2CXKCesTHJVGrSgG3qLl7+kJQSF
+                        yhY02jQcvd3Mw61OLCgIiRs1ck6kOmTi89cARjdALPzZ7DAqhoyobtM0pEBwYUL1B9U70figs1bv
+                        a4057lVamGhSB2L2fdPLXrewOo18LwE6U68hVtTyT9JQf9sQ4LG9oIdLQ7E0ooAqjwlJU0n/3t2R
+                        dO8/dYYIs3NGg3OexgBMSw==</ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </md:KeyDescriptor>
+        <md:Organization>
+            <md:OrganizationName xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="">grg</md:OrganizationName>
+            <md:OrganizationDisplayName xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="">grg</md:OrganizationDisplayName>
+            <md:OrganizationURL xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="">https://iam.grgbanking.com</md:OrganizationURL>
+        </md:Organization>
+        <md:ContactPerson contactType="technical">
+            <md:Company>grg</md:Company>
+            <md:GivenName>grg</md:GivenName>
+            <md:SurName>grg</md:SurName>
+            <md:EmailAddress>grg@163.com</md:EmailAddress>
+            <md:TelephoneNumber>400xxxx1111</md:TelephoneNumber>
+        </md:ContactPerson>
+        <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://127.0.0.1:8880/logout"/>
+        <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://127.0.0.1:8880/metadata/saml20/idp_metadata_5232342.xml"/>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:entity</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://127.0.0.1:8880/authz/saml20/assertion/5232342"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://127.0.0.1:8880/authz/saml20/assertion/5232342"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="http://127.0.0.1:8880/authz/saml20/assertion/5232342"/>
+    </md:IDPSSODescriptor>
+</md:EntityDescriptor>
+

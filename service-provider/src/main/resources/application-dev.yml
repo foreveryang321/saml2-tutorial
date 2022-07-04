@@ -1,0 +1,37 @@
+debug: false
+server:
+  port: 8080
+  servlet:
+    context-path: /saml-sp
+
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          test-sp:
+            #entity-id: "{baseUrl}/saml2/service-provider-metadata/{registrationId}"
+            #acs:
+            #  location: "{baseUrl}/login/saml2/sso/{registrationId}"
+            #  binding: POST # POST(default) or REDIRECT
+            signing:
+              credentials:
+                - private-key-location: "classpath:credentials/private.key"
+                  certificate-location: "classpath:credentials/public.cer"
+              #decryption:
+              #  - private-key-location: "classpath:credentials/private.key"
+              #    certificate-location: "classpath:credentials/public.cer"
+            identityprovider:
+              # the value contained in the Issuer attribute of the SAML responses that the identity provider will issue
+              entity-id: blog.yl-online.top
+              # metadata-uri: http://127.0.0.1:8880/metadata/saml20/idp_metadata_5232342.xml
+              metadata-uri: http://localhost:8081/sample-idp/saml/idp/metadata
+              singlesignon:
+                # the endpoint where the identity provider is expecting AuthnRequest s.
+                #  url: http://127.0.0.1:8880/authz/saml20/assertion/5232342
+                url: http://localhost:8081/sample-idp/saml/idp/select
+                #binding: REDIRECT # POST or REDIRECT(default)
+                sign-request: false
+              #verification:
+              #  credentials:
+              #    - certificate-location: "classpath:credentials/identity-provider-certificate.crt"
