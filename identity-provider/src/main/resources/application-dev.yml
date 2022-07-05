@@ -23,11 +23,12 @@ spring:
         entity-id: blog.yl-online.top
         alias: saml-idp
         sign-metadata: true
-        sign-assertions: true
+        #sign-assertions: true
+        #key-encryption-algorithm: rsa_1_5
+        #encrypt-assertions: false
+        #data-encryption-algorithm: aes256_cbc
         want-requests-signed: true
-        # signing-algorithm: RSA_SHA256
         default-signing-algorithm: rsa_sha256
-        # digest-method: SHA256
         default-digest: sha256
         single-logout-enabled: true
         name-ids:
