@@ -6,6 +6,9 @@ SAML2 SP ACS URL: http://localhost:8080/saml-sp/login/saml2/sso/test-sp
 
 user/password
 
+
+## [service-provider] 实现 saml sp 端
+
 SAML2 SP Metadata：http://localhost:8080/saml-sp/saml2/service-provider-metadata/test-sp
 
 >  构建证书
