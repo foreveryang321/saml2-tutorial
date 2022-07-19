@@ -1,6 +1,6 @@
 debug: false
 server:
-  port: 8080
+  port: 8082
   servlet:
     context-path: /saml-sp
 
@@ -12,6 +12,7 @@ spring:
           test-sp:
             #entity-id: "{baseUrl}/saml2/service-provider-metadata/{registrationId}"
             #acs:
+            #  # sp 服务接受 saml 断言（SAMLResponse）的地址
             #  location: "{baseUrl}/login/saml2/sso/{registrationId}"
             #  binding: POST # POST(default) or REDIRECT
             signing:
@@ -24,12 +25,14 @@ spring:
             identityprovider:
               # the value contained in the Issuer attribute of the SAML responses that the identity provider will issue
               entity-id: blog.yl-online.top
-              # metadata-uri: http://127.0.0.1:8880/metadata/saml20/idp_metadata_5232342.xml
               metadata-uri: http://localhost:8081/sample-idp/saml/idp/metadata
+              #metadata-uri: http://localhost:8080/easy-iam/saml/idp/metadata
+              #metadata-uri: http://127.0.0.1:8880/metadata/saml20/idp_metadata_5232342.xml
               singlesignon:
                 # the endpoint where the identity provider is expecting AuthnRequest s.
-                #  url: http://127.0.0.1:8880/authz/saml20/assertion/5232342
                 url: http://localhost:8081/sample-idp/saml/idp/select
+                #url: http://localhost:8080/easy-iam/saml/idp/select
+                #url: http://127.0.0.1:8880/authz/saml20/assertion/5232342
                 #binding: REDIRECT # POST or REDIRECT(default)
                 sign-request: false
               #verification:
