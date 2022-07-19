@@ -18,7 +18,7 @@ spring:
             signing:
               credentials:
                 - private-key-location: "classpath:credentials/private.key"
-                  certificate-location: "classpath:credentials/public.crt"
+                  certificate-location: "classpath:credentials/cert.crt"
               #decryption:
               #  - private-key-location: "classpath:credentials/private.key"
               #    certificate-location: "classpath:credentials/public.cer"
